@@ -7,7 +7,7 @@ const Form = ({
   password,
   confirm,
   errorPassword,
-  setName,
+  setUserName,
   setEmail,
   setPassword,
   setConfirm,
@@ -30,7 +30,7 @@ const Form = ({
           type="text"
           placeholder="name"
           onChange={(event) => {
-            setName(event.target.value);
+            setUserName(event.target.value);
           }}
           value={userName}
         />
@@ -50,7 +50,9 @@ const Form = ({
       <div>
         <label htmlFor="password">Password</label>
         <input
+          id="password"
           type={showPassword ? "text" : "password"}
+          // autocomplete="new-password"
           placeholder="password"
           onChange={(e) => {
             setErrorPassword(false);
@@ -76,7 +78,9 @@ const Form = ({
       <div>
         <label htmlFor="confirm">Confirm your password</label>
         <input
+          id="confirm"
           type={showConfirmPassword ? "text" : "password"}
+          // autocomplete="new-password"
           placeholder="confirm password"
           onChange={(event) => {
             setConfirm(event.target.value);

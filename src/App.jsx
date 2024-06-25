@@ -9,7 +9,7 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 library.add(faEye);
 
 function App() {
-  const [userName, setName] = useState("");
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [confirm, setConfirm] = useState("");
   const [password, setPassword] = useState("");
@@ -44,7 +44,7 @@ function App() {
           confirm={confirm}
           password={password}
           errorPassword={errorPassword}
-          setName={setName}
+          setUserName={setUserName}
           setEmail={setEmail}
           setConfirm={setConfirm}
           setPassword={setPassword}
