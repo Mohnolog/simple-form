@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+main {
+  width: 1024px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results > div {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background-color: rgb(242, 242, 242);
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.results > div > span:not(:last-child) {
+  margin-bottom: 20px;
+}
+form {
+  border: 2px white solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 50vh;
+  gap: 20px;
+}
+div {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  width: 100%;
+}
+label {
+  width: 100%;
+}
+.submit {
+  width: 28%;
+}
+.redBorder {
+  border: red solid 1px;
+}
+.back-button {
+  width: 250px;
+  outline: none;
+  height: 45px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.hidden {
+  visibility: hidden;
+}
