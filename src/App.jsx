@@ -31,36 +31,34 @@ function App() {
 
   return (
     <main>
-      {step === 1 ? (
-        <h1>Create account</h1>
-      ) : step === 2 ? (
-        <h1>Results</h1>
-      ) : null}
-      {step === 1 ? (
+      {step === 1 && <h1>Create account</h1>}
+      {step === 2 && <h1>Results</h1>}
+      {step === 1 && (
         <Form
           handleSubmit={handleSubmit}
           userName={userName}
-          email={email}
-          confirm={confirm}
-          password={password}
-          errorPassword={errorPassword}
           setUserName={setUserName}
+          email={email}
           setEmail={setEmail}
+          confirm={confirm}
           setConfirm={setConfirm}
+          password={password}
           setPassword={setPassword}
+          errorPassword={errorPassword}
           setErrorPassword={setErrorPassword}
-          setStep={setStep}
           errorMessage={errorMessage}
           setErrorMessage={setErrorMessage}
+          setStep={setStep}
         />
-      ) : step === 2 ? (
+      )}
+      {step === 2 && (
         <StepTwo
           userName={userName}
           email={email}
           password={password}
           setStep={setStep}
         />
-      ) : null}
+      )}
     </main>
   );
 }
